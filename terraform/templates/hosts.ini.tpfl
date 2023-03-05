@@ -1,0 +1,11 @@
+[master]
+${master} ansible_user=${ansible_user}
+
+[additional-controllers]
+%{ for ip in additional_controllers ~}
+${ip} ansible_user=${ansible_user}
+%{ endfor ~}
+
+[aws_k8s_cluster:children]
+master
+additional-controllers

@@ -1,0 +1,15 @@
+- hosts: aws_k8s_cluster
+  become: true
+  gather_facts: yes
+  roles:
+    - role: dependencies
+
+- hosts: master
+  become: true
+  roles:
+    - role: k8s-master
+
+- hosts: additional-controllers
+  become: true
+  roles:
+    - role: additional-controllers

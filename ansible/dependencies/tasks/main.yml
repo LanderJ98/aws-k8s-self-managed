@@ -1,0 +1,8 @@
+---
+# tasks file for dependencies
+- name: "Tasks"
+  include_tasks: "{{ item }}"
+  loop:
+    - network.yaml
+    - packages.yaml
+    - binaries.yaml

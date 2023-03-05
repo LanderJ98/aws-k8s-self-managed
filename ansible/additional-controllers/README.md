@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This adds additional controllers to the cluster as control plane nodes
 
 Requirements
 ------------

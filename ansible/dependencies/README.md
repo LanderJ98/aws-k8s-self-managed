@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Installs initial binaries onto the instances, updates/upgrades packages and sets any additional network configuration
 
 Requirements
 ------------

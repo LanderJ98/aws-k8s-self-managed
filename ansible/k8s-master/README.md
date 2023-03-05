@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This creates the initial cluster using k3s on the first EC2 instance created from Terraform.
 
 Requirements
 ------------

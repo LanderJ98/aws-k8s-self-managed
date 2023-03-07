@@ -4,7 +4,7 @@ resource "local_file" "ansible_vars" {
     ansible_user      = "ubuntu"
     systemd_dir       = "/etc/systemd/system"
     master_endpoint   = module.ec2_instance[0].private_ip
-    extra_server_args = "--tls-san ${module.k8s-lb.lb_dns_name}"
+    extra_server_args = "--disable=servicelb --tls-san ${module.k8s-lb.lb_dns_name}"
     extra_agent_args  = ""
   })
   filename        = "../ansible/inventory/group_vars/all.yaml"

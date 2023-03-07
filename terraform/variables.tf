@@ -24,7 +24,7 @@ variable "num_of_workers" {
 }
 
 variable "worker_sg_name" {
-  type = string
+  type    = string
   default = "workers-sg"
 }
 
@@ -59,11 +59,11 @@ variable "ssh_key_name" {
 }
 
 variable "http_port" {
-  type = number
+  type    = number
   default = 80
 }
 
 variable "https_port" {
-  type = number
+  type    = number
   default = 443
 }

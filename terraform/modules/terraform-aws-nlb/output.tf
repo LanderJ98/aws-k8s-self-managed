@@ -12,5 +12,5 @@ output "http_target_group_arn" {
 
 
 output "https_target_group_arn" {
-  value =  var.https_enabled ? aws_lb_target_group.https_tg[0].arn : null
+  value = var.https_enabled ? aws_lb_target_group.https_tg[0].arn : null
 }

@@ -11,7 +11,7 @@ output "addtitional-controllers" {
 }
 
 output "workers" {
-  value = try(slice(module.workers, 0, var.num_of_workers).*.public_ip, null)
+  value = try(module.workers.*.public_ip, null)
 }
 
 

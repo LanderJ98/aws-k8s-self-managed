@@ -17,7 +17,7 @@ resource "aws_lb_listener" "http_listener" {
 }
 
 resource "aws_lb_listener" "https" {
-  count = var.https_enabled ? 1 : 0
+  count             = var.https_enabled ? 1 : 0
   load_balancer_arn = aws_lb.lb.arn
   port              = var.https_port
   protocol          = "TCP"
@@ -39,7 +39,7 @@ resource "aws_lb_target_group" "http_tg" {
 }
 
 resource "aws_lb_target_group" "https_tg" {
-  count = var.https_enabled ? 1 : 0
+  count       = var.https_enabled ? 1 : 0
   name        = var.https_target_group_name
   port        = var.https_port
   protocol    = "TCP"

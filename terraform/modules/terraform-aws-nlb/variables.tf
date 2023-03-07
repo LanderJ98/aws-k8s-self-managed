@@ -16,17 +16,17 @@ variable "http_port" {
 }
 
 variable "https_port" {
-  type = number
+  type    = number
   default = null
 }
 
 variable "load_balancer_type" {
-  type = string
+  type    = string
   default = "network"
 }
 
 variable "http_target_group_name" {
-  type    = string
+  type = string
 }
 
 variable "https_target_group_name" {

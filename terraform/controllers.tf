@@ -1,4 +1,4 @@
-module "ec2_instance" {
+module "controllers" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 

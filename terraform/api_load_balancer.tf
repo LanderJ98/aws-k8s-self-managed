@@ -8,6 +8,6 @@ module "k8s-lb" {
 resource "aws_lb_target_group_attachment" "controller_targets" {
   count            = var.num_of_controllers
   target_group_arn = module.k8s-lb.target_group_arn
-  target_id        = module.ec2_instance[count.index].id
+  target_id        = module.controllers[count.index].id
   port             = var.kube_api_port
 }

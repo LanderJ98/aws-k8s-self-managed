@@ -3,11 +3,11 @@ output "public_subnets" {
 }
 
 output "master-controller" {
-  value = try(module.ec2_instance[0].public_ip, null)
+  value = try(module.controllers[0].public_ip, null)
 }
 
 output "addtitional-controllers" {
-  value = try(slice(module.ec2_instance, 1, var.num_of_controllers).*.public_ip, null)
+  value = try(slice(module.controllers, 1, var.num_of_controllers).*.public_ip, null)
 }
 
 output "kube_api_lb" {

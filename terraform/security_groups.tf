@@ -21,7 +21,7 @@ module "controller_sg" {
       description = "Kube API access"
       cidr_blocks = var.cidr_blocks
     },
-        {
+    {
       from_port   = 2379
       to_port     = 2380
       protocol    = 6

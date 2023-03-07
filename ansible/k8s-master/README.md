@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This creates the initial cluster using k3s on the first EC2 instance created from Terraform.
+This creates the initial cluster using k3son the first EC2 instance created from Terraform.
 
 Requirements
 ------------

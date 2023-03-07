@@ -13,3 +13,11 @@ Terraform generates the ansible variable and host files.
 
 1. Terraform >= 1.3.x
 2. Ansible >= 2.14.x and Python >= 3.9
+
+## Get your kubeconfig
+
+```shell
+scp ubuntu@<master-node-ip>:/home/ubuntu/.kube/config ~/.kube/config
+```
+
+where the master node ip is the master-controller from the terraform output. Then edit the file and change the server ip to the load balancer dns terraform output

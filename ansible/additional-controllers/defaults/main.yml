@@ -2,4 +2,4 @@
 # defaults file for additional-controllers
 ansible_user: root
 server_init_args: >-
-  --server https://{{ kube_api_lb }}:6443 --write-kubeconfig-mode 644 {{ extra_server_args | default('') }}
+  --server https://{{ master_endpoint }}:6443 --write-kubeconfig-mode 644 {{ extra_server_args | default('') }}

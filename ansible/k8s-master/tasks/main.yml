@@ -67,10 +67,9 @@
     owner: "{{ ansible_user }}"
     mode: "u=rw,g=,o="
 
-- name: Configure kubectl cluster to https://{{ kube_api_lb}}:6443
+- name: Configure kubectl cluster to https://{{ kube_api_lb }}:6443
   become_user: "{{ ansible_user }}"
   command: k3s kubectl config set-cluster default --server=https://{{ kube_api_lb }}:6443 --kubeconfig ~/{{ ansible_user }}.kube/config
-  changed_when: true
 
 - name: Create kubectl symlink
   file:

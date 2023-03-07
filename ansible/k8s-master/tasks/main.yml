@@ -70,7 +70,6 @@
 - name: Configure kubectl cluster to https://{{ master_endpoint }}:6443
   become_user: "{{ ansible_user }}"
   command: k3s kubectl config set-cluster default --server=https://{{ master_endpoint }}:6443 --kubeconfig ~/{{ ansible_user }}.kube/config
-  changed_when: true
 
 - name: Create kubectl symlink
   file:

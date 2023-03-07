@@ -1,7 +1,7 @@
 resource "local_file" "ansible_vars" {
   content = templatefile("templates/ansible_vars.tpfl", {
     k3s_version       = "v1.25.7-rc1+k3s1"
-    ansible_user      = "ec2-user"
+    ansible_user      = "ubuntu"
     systemd_dir       = "/etc/systemd/system"
     master_endpoint   = module.ec2_instance[0].private_ip
     extra_server_args = "--tls-san ${module.k8s-lb.lb_dns_name}"

@@ -13,3 +13,8 @@
   become: true
   roles:
     - role: additional-controllers
+
+- hosts: workers
+  become: true
+  roles:
+    - role: k8s-workers

@@ -1,2 +1,5 @@
 ---
 # defaults file for k8s-workers
+ansible_user: root
+agent_init_args: >-
+  --server https://{{ master_endpoint }}:6443 {{ extra_agent_args | default("") }}

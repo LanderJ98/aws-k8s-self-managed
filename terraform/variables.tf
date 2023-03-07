@@ -18,6 +18,16 @@ variable "num_of_controllers" {
   default = 2
 }
 
+variable "num_of_workers" {
+  type    = number
+  default = 3
+}
+
+variable "worker_sg_name" {
+  type    = string
+  default = "workers-sg"
+}
+
 variable "ami_id" {
   type    = string
   default = "ami-0aaa5410833273cfe"
@@ -46,4 +56,14 @@ variable "kube_api_port" {
 variable "ssh_key_name" {
   type    = string
   default = "jl-ee-mbp"
+}
+
+variable "http_port" {
+  type    = number
+  default = 80
+}
+
+variable "https_port" {
+  type    = number
+  default = 443
 }

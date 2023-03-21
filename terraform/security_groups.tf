@@ -62,6 +62,20 @@ module "worker_sg" {
       protocol    = 6
       description = "Kube API access"
       cidr_blocks = var.vpc_cidr
+    },
+    {
+      from_port   = var.http_port
+      to_port     = var.http_port
+      protocol    = 6
+      description = "Kube API access"
+      cidr_blocks = var.vpc_cidr
+    },
+    {
+      from_port   = var.https_port
+      to_port     = var.https_port
+      protocol    = 6
+      description = "Kube API access"
+      cidr_blocks = var.vpc_cidr
     }
   ]
   egress_with_cidr_blocks = [

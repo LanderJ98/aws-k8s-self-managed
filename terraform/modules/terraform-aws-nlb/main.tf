@@ -32,8 +32,13 @@ resource "aws_lb_target_group" "http_tg" {
   name        = var.http_target_group_name
   port        = var.http_port
   protocol    = "TCP"
+  proxy_protocol_v2 = var.proxy_protocol_v2_enabled
   target_type = "instance"
   vpc_id      = var.vpc_id
+
+  health_check {
+    protocol = "TCP"
+  }
 
   #tags = var.tags
 }
@@ -43,8 +48,13 @@ resource "aws_lb_target_group" "https_tg" {
   name        = var.https_target_group_name
   port        = var.https_port
   protocol    = "TCP"
+  proxy_protocol_v2 = var.proxy_protocol_v2_enabled
   target_type = "instance"
   vpc_id      = var.vpc_id
+
+  health_check {
+    protocol = "TCP"
+  }
 
   #tags = var.tags
 }

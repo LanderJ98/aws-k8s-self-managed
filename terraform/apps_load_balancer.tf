@@ -4,6 +4,7 @@ module "apps-lb" {
   vpc_id                  = module.vpc.vpc_id
   lb_name                 = "apps-lb"
   https_enabled           = true
+  proxy_protocol_v2_enabled = true
   http_port               = var.http_port
   http_target_group_name  = "apps-http-tg"
   https_port              = var.https_port

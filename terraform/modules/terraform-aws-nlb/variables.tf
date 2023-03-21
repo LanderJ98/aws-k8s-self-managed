@@ -34,6 +34,11 @@ variable "https_target_group_name" {
   default = null
 }
 
+variable "proxy_protocol_v2_enabled" {
+  type = bool
+  default = false
+}
+
 variable "vpc_id" {
   type = string
 }

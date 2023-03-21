@@ -8,10 +8,11 @@ module "workers" {
 
   ami                         = var.ami_id
   instance_type               = var.instance_type
+  availability_zone           = data.aws_availability_zones.available.names[count.index]
   key_name                    = aws_key_pair.deployer.key_name
   monitoring                  = true
   vpc_security_group_ids      = [module.worker_sg.security_group_id]
-  subnet_id                   = module.vpc.public_subnets[1]
+  subnet_id                   = module.vpc.public_subnets[count.index]
   associate_public_ip_address = true
 
   tags = {

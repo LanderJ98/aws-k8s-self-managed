@@ -35,7 +35,7 @@ variable "https_target_group_name" {
 }
 
 variable "proxy_protocol_v2_enabled" {
-  type = bool
+  type    = bool
   default = false
 }
 

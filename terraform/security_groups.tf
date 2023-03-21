@@ -67,14 +67,14 @@ module "worker_sg" {
       from_port   = var.http_port
       to_port     = var.http_port
       protocol    = 6
-      description = "Kube API access"
+      description = "HTTP Access"
       cidr_blocks = var.vpc_cidr
     },
     {
       from_port   = var.https_port
       to_port     = var.https_port
       protocol    = 6
-      description = "Kube API access"
+      description = "HTTPS Access"
       cidr_blocks = var.vpc_cidr
     }
   ]
